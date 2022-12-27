@@ -1,0 +1,59 @@
+{
+    "model_path": "v2\\optimized_model.onnx",
+    "tuning_ort_version": "1.11.0",
+    "core_num": 6,
+    "quantization_enabled": "True",
+    "transformer_enabled": "False",
+    "transformer_args": null,
+    "pretuning_test_name": "pretuning",
+    "tested_eps": [
+        "CPUExecutionProvider"
+    ],
+    "successful_eps": [
+        "CPUExecutionProvider"
+    ],
+    "best_test_name": "pretuning",
+    "total_tests_num": 2,
+    "all_tuning_results": [
+        {
+            "test_name": "execution_provider_CPUExecutionProvider_execution_mode_ExecutionMode.ORT_SEQUENTIAL_graph_optimization_level_99_inter_op_num_threads_1_intra_op_num_threads_1",
+            "execution_provider": "CPUExecutionProvider",
+            "env_vars": {
+                "OMP_WAIT_POLICY": "None",
+                "OMP_NUM_THREADS": "1",
+                "KMP_AFFINITY": "None",
+                "OMP_MAX_ACTIVE_LEVELS": "None",
+                "ORT_TENSORRT_FP16_ENABLE": "0"
+            },
+            "session_options": {
+                "inter_op_num_threads": "1",
+                "intra_op_num_threads": "1",
+                "execution_mode": "ExecutionMode.ORT_SEQUENTIAL",
+                "graph_optimization_level": "99"
+            },
+            "latency_ms": {
+                "avg": 27654.45477,
+                "latency_p50": 27659.1086,
+                "latency_p75": 27670.123,
+                "latency_p90": 27675.8434,
+                "latency_p95": 27677.7502,
+                "latency_p99": 27679.27564,
+                "latency_p999": 27679.61886
+            },
+            "throughput": 0.036160539353132216
+        },
+        {
+            "test_name": "pretuning",
+            "latency_ms": {
+                "avg": 8078.7785,
+                "latency_p50": 8089.28965,
+                "latency_p75": 8101.59885,
+                "latency_p90": 8112.28896,
+                "latency_p95": 8115.85233,
+                "latency_p99": 8118.70303,
+                "latency_p999": 8119.34443
+            },
+            "throughput": 0.12378108893566026
+        }
+    ]
+}
